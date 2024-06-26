@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS TASK 5</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .error {
+            color: red;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <center> <h1>TASK-5 </h1>
+    <div class="container">
+        <form id="myForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><span id="nameError" class="error"></span><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><span id="emailError" class="error"></span><br><br>
+            
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url"><span id="urlError" class="error"></span><br><br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><span id="messageError" class="error"></span><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            document.getElementById("nameError").textContent = "";
+            document.getElementById("emailError").textContent = "";
+            document.getElementById("urlError").textContent = "";
+            document.getElementById("messageError").textContent = "";
+
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var url = document.getElementById("url").value.trim();
+            var message = document.getElementById("message").value.trim();
+
+            var isValid = true;
+
+            if (name === "") {
+                document.getElementById("nameError").textContent = "This field is required";
+                isValid = false;
+            }
+
+            var emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+            if (!email.match(emailPattern)) {
+                document.getElementById("emailError").textContent = "A valid email address is required.";
+                isValid = false;
+            }
+
+            var urlPattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i;
+            if (!url.match(urlPattern)) {
+                document.getElementById("urlError").textContent = "A valid URL is required";
+                isValid = false;
+            }
+
+            if (message === "") {
+                document.getElementById("messageError").textContent = "This field is required";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

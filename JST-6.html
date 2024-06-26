@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK6</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #eee;
+        }
+
+        #wrapper {
+            width: 500px;
+            height: 50%;
+            overflow: hidden;
+            border: 0px solid #000;
+            margin: 50px auto;
+            padding: 10px;
+        }
+
+        .main-content {
+            width: 250px;
+            height: auto;
+            margin: 10px auto;
+            background-color: #fff;
+            border: 2px solid #e6e6e6;
+            padding: 40px 50px;
+        }
+
+        .header {
+            border: 0px solid #000;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 50px;
+            width: 175px;
+        }
+
+        .input-1,
+        .input-2 {
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 8px 12px 8px 30px; /* Adjusted padding for icon */
+            border: 1px solid #dbdbdb;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: #999; /* Icon color */
+        }
+
+        .btn {
+            width: 100%;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            padding: 5px 12px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .rememberme {
+            text-align: center;
+            font-family: 'Overpass Mono', monospace;
+            margin-top: 10px;
+        }
+
+        .rememberme a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #3897f0;
+            font-family: 'Overpass Mono', monospace;
+        }
+
+        .sub-content {
+            width: 250px;
+            height: auto;
+            margin: 10px auto;
+            border: 1px solid #e6e6e6;
+            padding: 20px 50px;
+            background-color: #fff;
+        }
+
+        .s-part {
+            text-align: center;
+            font-family: 'Overpass Mono', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+        }
+
+        .s-part a {
+            text-decoration: none;
+            cursor: pointer;
+            color: #3897f0;
+            font-family: 'Overpass Mono', monospace;
+            word-spacing: -3px;
+            letter-spacing: -2px;
+            font-weight: normal;
+        }
+
+        input:focus {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <center> <h1>TASK-6 </h1>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Overpass+Mono" rel="stylesheet">
+
+    <div id="wrapper">
+        <div class="main-content">
+            <div class="header">
+                <img src="Instagram.png" />
+            </div>
+            <div class="l-part">
+                <div class="input-with-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person input-icon" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0-6 0 3 3 0 0 0 6 0zM4 1a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4z"/>
+                        <path fill-rule="evenodd" d="M4 0a8 8 0 0 1 8 8 8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm-1 11a6.97 6.97 0 0 1-4-1.357A7.993 7.993 0 0 0 8 16a7.993 7.993 0 0 0 7-6.357A6.97 6.97 0 0 1 8 11a6.97 6.97 0 0 1-5 1z"/>
+                    </svg>
+                    <input type="text" placeholder="Username" class="input-1" />
+                </div>
+                <div class="input-with-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock input-icon" viewBox="0 0 16 16">
+                        <path d="M8 5a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3 3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zM8 3a5 5 0 0 1 5 5v4a5 5 0 0 1-5 5 5 5 0 0 1-5-5V8a5 5 0 0 1 5-5z"/>
+                        <path fill-rule="evenodd" d="M3 8v4a5 5 0 0 0 5 5 5 5 0 0 0 5-5V8a5 5 0 0 0-5-5 5 5 0 0 0-5 5z"/>
+                    </svg>
+                    <input type="password" placeholder="Password" class="input-2" />
+                </div>
+                <input type="button" value="Log in" class="btn" />
+            </div>
+            <div class="rememberme">
+                <input type="checkbox" name="rememberme" id="rememberme"> Remember me <br><br>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="sub-content">
+            <div class="s-part">
+                Don't have an account?<a href="#">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
